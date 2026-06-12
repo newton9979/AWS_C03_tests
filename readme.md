@@ -135,17 +135,38 @@ cd AWS_C03_tests
 
 ### Deploy the Application
 
-Use the deployment script provided in the repository:
+## 🚀 Deployment
+
+This application runs inside a Docker container and can be deployed using the provided deployment script.
+
+### Run Deployment
 
 ```bash
+chmod +x deploy.sh
 ./deploy.sh
 ```
 
-Or, if using a Python deployment script:
+### What the Script Does
 
-```bash
-python deploy.py
+* Updates the Ubuntu server
+* Installs Git and Docker
+* Configures Docker services
+* Clones the repository
+* Builds the Docker image (`exam-app:v1`)
+* Starts the Docker container
+* Exposes the application on port **8080**
+
+### Access the Application
+
+After successful deployment, open your browser and navigate to:
+
+```text
+http://<server-ip>:8080
 ```
+
+The deployment script will display the server IP address at the end of the execution.
+
+> **Note:** If the deployment script fails due to a user session or permission issue, log out and log back in to the server, then run the script again.
 
 The deployment script will:
 
