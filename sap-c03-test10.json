@@ -1,0 +1,158 @@
+[
+  {
+    "id": 676,
+    "exam": "SAP-C03",
+    "test": 10,
+    "topic": 1,
+    "questionType": "single",
+    "question": "A company's application uses Network Load Balancers, Auto Scaling groups, Amazon EC2 instances, and databases that are deployed in an Amazon VPC. The company wants to capture information about tra\u0000c to and from the network interfaces in near real time in its Amazon VPC. The company wants to send the information to Amazon OpenSearch Service for analysis. Which solution will meet these requirements?",
+    "options": [
+      "Create a log group in Amazon CloudWatch Logs. Con\u0000gure VPC Flow Logs to send the log data to the log group. Use Amazon Kinesis Data Streams to stream the logs from the log group to OpenSearch Service.",
+      "Create a log group in Amazon CloudWatch Logs. Con\u0000gure VPC Flow Logs to send the log data to the log group. Use Amazon Kinesis Data Firehose to stream the logs from the log group to OpenSearch Service.",
+      "Create a trail in AWS CloudTrail. Con\u0000gure VPC Flow Logs to send the log data to the trail. Use Amazon Kinesis Data Streams to stream the logs from the trail to OpenSearch Service.",
+      "Create a trail in AWS CloudTrail. Con\u0000gure VPC Flow Logs to send the log data to the trail. Use Amazon Kinesis Data Firehose to stream the logs from the trail to OpenSearch Service."
+    ],
+    "correctAnswers": [],
+    "needsReview": true,
+    "explanation": ""
+  },
+  {
+    "id": 677,
+    "exam": "SAP-C03",
+    "test": 10,
+    "topic": 1,
+    "questionType": "single",
+    "question": "A company is developing an application that will run on a production Amazon Elastic Kubernetes Service (Amazon EKS) cluster. The EKS cluster has managed node groups that are provisioned with On-Demand Instances. The company needs a dedicated EKS cluster for development work. The company will use the development cluster infrequently to test the resiliency of the application. The EKS cluster must manage all the nodes. Which solution will meet these requirements MOST cost-effectively?",
+    "options": [
+      "Create a managed node group that contains only Spot Instances.",
+      "Create two managed node groups. Provision one node group with On-Demand Instances. Provision the second node group with Spot Instances.",
+      "Create an Auto Scaling group that has a launch con\u0000guration that uses Spot Instances. Con\u0000gure the user data to add the nodes to the EKS cluster.",
+      "Create a managed node group that contains only On-Demand Instances."
+    ],
+    "correctAnswers": [],
+    "needsReview": true,
+    "explanation": ""
+  },
+  {
+    "id": 678,
+    "exam": "SAP-C03",
+    "test": 10,
+    "topic": 1,
+    "questionType": "single",
+    "question": "A company stores sensitive data in Amazon S3. A solutions architect needs to create an encryption solution. The company needs to fully control the ability of users to create, rotate, and disable encryption keys with minimal effort for any data that must be encrypted. Which solution will meet these requirements?",
+    "options": [
+      "Use default server-side encryption with Amazon S3 managed encryption keys (SSE-S3) to store the sensitive data.",
+      "Create a customer managed key by using AWS Key Management Service (AWS KMS). Use the new key to encrypt the S3 objects by using server-side encryption with AWS KMS keys (SSE-KMS).",
+      "Create an AWS managed key by using AWS Key Management Service (AWS KMS). Use the new key to encrypt the S3 objects by using server-side encryption with AWS KMS keys (SSE-KMS).",
+      "Download S3 objects to an Amazon EC2 instance. Encrypt the objects by using customer managed keys. Upload the encrypted objects back into Amazon S3."
+    ],
+    "correctAnswers": [],
+    "needsReview": true,
+    "explanation": ""
+  },
+  {
+    "id": 679,
+    "exam": "SAP-C03",
+    "test": 10,
+    "topic": 1,
+    "questionType": "multiple",
+    "question": "A company wants to back up its on-premises virtual machines (VMs) to AWS. The company's backup solution exports on-premises backups to an Amazon S3 bucket as objects. The S3 backups must be retained for 30 days and must be automatically deleted after 30 days. Which combination of steps will meet these requirements? (Choose three.)",
+    "options": [
+      "Create an S3 bucket that has S3 Object Lock enabled.",
+      "Create an S3 bucket that has object versioning enabled.",
+      "Con\u0000gure a default retention period of 30 days for the objects.",
+      "Con\u0000gure an S3 Lifecycle policy to protect the objects for 30 days.",
+      "Con\u0000gure an S3 Lifecycle policy to expire the objects after 30 days.",
+      "Con\u0000gure the backup solution to tag the objects with a 30-day retention period"
+    ],
+    "correctAnswers": [],
+    "needsReview": true,
+    "explanation": ""
+  },
+  {
+    "id": 680,
+    "exam": "SAP-C03",
+    "test": 10,
+    "topic": 1,
+    "questionType": "single",
+    "question": "A solutions architect needs to copy \u0000les from an Amazon S3 bucket to an Amazon Elastic File System (Amazon EFS) \u0000le system and another S3 bucket. The \u0000les must be copied continuously. New \u0000les are added to the original S3 bucket consistently. The copied \u0000les should be overwritten only if the source \u0000le changes. Which solution will meet these requirements with the LEAST operational overhead?",
+    "options": [
+      "Create an AWS DataSync location for both the destination S3 bucket and the EFS \u0000le system. Create a task for the destination S3 bucket and the EFS \u0000le system. Set the transfer mode to transfer only data that has changed.",
+      "Create an AWS Lambda function. Mount the \u0000le system to the function. Set up an S3 event noti\u0000cation to invoke the function when \u0000les are created and changed in Amazon S3. Con\u0000gure the function to copy \u0000les to the \u0000le system and the destination S3 bucket.",
+      "Create an AWS DataSync location for both the destination S3 bucket and the EFS \u0000le system. Create a task for the destination S3 bucket and the EFS \u0000le system. Set the transfer mode to transfer all data.",
+      "Launch an Amazon EC2 instance in the same VPC as the \u0000le system. Mount the \u0000le system. Create a script to routinely synchronize all objects that changed in the origin S3 bucket to the destination S3 bucket and the mounted \u0000le system."
+    ],
+    "correctAnswers": [],
+    "needsReview": true,
+    "explanation": ""
+  },
+  {
+    "id": 681,
+    "exam": "SAP-C03",
+    "test": 10,
+    "topic": 1,
+    "questionType": "single",
+    "question": "A company uses Amazon EC2 instances and stores data on Amazon Elastic Block Store (Amazon EBS) volumes. The company must ensure that all data is encrypted at rest by using AWS Key Management Service (AWS KMS). The company must be able to control rotation of the encryption keys. Which solution will meet these requirements with the LEAST operational overhead?",
+    "options": [
+      "Create a customer managed key. Use the key to encrypt the EBS volumes.",
+      "Use an AWS managed key to encrypt the EBS volumes. Use the key to con\u0000gure automatic key rotation.",
+      "Create an external KMS key with imported key material. Use the key to encrypt the EBS volumes.",
+      "Use an AWS owned key to encrypt the EBS volumes."
+    ],
+    "correctAnswers": [],
+    "needsReview": true,
+    "explanation": ""
+  },
+  {
+    "id": 682,
+    "exam": "SAP-C03",
+    "test": 10,
+    "topic": 1,
+    "questionType": "single",
+    "question": "A company needs a solution to enforce data encryption at rest on Amazon EC2 instances. The solution must automatically identify noncompliant resources and enforce compliance policies on \u0000ndings. Which solution will meet these requirements with the LEAST administrative overhead?",
+    "options": [
+      "Use an IAM policy that allows users to create only encrypted Amazon Elastic Block Store (Amazon EBS) volumes. Use AWS Con\u0000g and AWS Systems Manager to automate the detection and remediation of unencrypted EBS volumes.",
+      "Use AWS Key Management Service (AWS KMS) to manage access to encrypted Amazon Elastic Block Store (Amazon EBS) volumes. Use AWS Lambda and Amazon EventBridge to automate the detection and remediation of unencrypted EBS volumes.",
+      "Use Amazon Macie to detect unencrypted Amazon Elastic Block Store (Amazon EBS) volumes. Use AWS Systems Manager Automation rules to automatically encrypt existing and new EBS volumes.",
+      "Use Amazon inspector to detect unencrypted Amazon Elastic Block Store (Amazon EBS) volumes. Use AWS Systems Manager Automation rules to automatically encrypt existing and new EBS volumes."
+    ],
+    "correctAnswers": [],
+    "needsReview": true,
+    "explanation": ""
+  },
+  {
+    "id": 683,
+    "exam": "SAP-C03",
+    "test": 10,
+    "topic": 1,
+    "questionType": "multiple",
+    "question": "A company is migrating its multi-tier on-premises application to AWS. The application consists of a single-node MySQL database and a multi-node web tier. The company must minimize changes to the application during the migration. The company wants to improve application resiliency after the migration. Which combination of steps will meet these requirements? (Choose two.)",
+    "options": [
+      "Migrate the web tier to Amazon EC2 instances in an Auto Scaling group behind an Application Load Balancer.",
+      "Migrate the database to Amazon EC2 instances in an Auto Scaling group behind a Network Load Balancer.",
+      "Migrate the database to an Amazon RDS Multi-AZ deployment.",
+      "Migrate the web tier to an AWS Lambda function.",
+      "Migrate the database to an Amazon DynamoDB table."
+    ],
+    "correctAnswers": [],
+    "needsReview": true,
+    "explanation": ""
+  },
+  {
+    "id": 684,
+    "exam": "SAP-C03",
+    "test": 10,
+    "topic": 1,
+    "questionType": "single",
+    "question": "A company wants to migrate its web applications from on premises to AWS. The company is located close to the eu-central-1 Region. Because of regulations, the company cannot launch some of its applications in eu-central-1. The company wants to achieve single-digit millisecond latency. Which solution will meet these requirements?",
+    "options": [
+      "Deploy the applications in eu-central-1. Extend the company’s VPC from eu-central-1 to an edge location in Amazon CloudFront.",
+      "Deploy the applications in AWS Local Zones by extending the company's VPC from eu-central-1 to the chosen Local Zone.",
+      "Deploy the applications in eu-central-1. Extend the company’s VPC from eu-central-1 to the regional edge caches in Amazon CloudFront.",
+      "Deploy the applications in AWS Wavelength Zones by extending the company’s VPC from eu-central-1 to the chosen Wavelength Zone."
+    ],
+    "correctAnswers": [],
+    "needsReview": true,
+    "explanation": ""
+  }
+]
